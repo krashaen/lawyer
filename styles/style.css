@@ -1,1 +1,35 @@
 @import '../fonts/carlito/carlito.css';
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.header {
+  background-image: url('../images/bg_header.jpg');
+  height: 300px;
+}
+
+.nav-bar {
+  background-color: #293a4d;
+  height: 50px;
+}
+
+.nav-bar__logo {
+  background-image: url('../images/logo.png');
+  height: 30px;
+  width: 30px;
+}
+
+.nav-bar__title {
+  display: block;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-family: 'Carlito-bold';
+}
+
+.nav-bar__title_small {
+  font-size: 12px;
+  font-family: 'Carlito';
+}
