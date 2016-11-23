@@ -1,4 +1,4 @@
-@import '../fonts/carlito/carlito.css';
+@import '../fonts/fonts.css';
 
 body{
   margin: 0;
@@ -161,4 +161,67 @@ body{
   background-image: url('../images/help.svg');
   width: 30px;
   height: 30px; 
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #293a4d;
+  height: 50px;
+  color: #eaeaea;
+  font-family: 'Carlito';
+}
+
+.footer__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__copyright {
+  font-family: 'MinionPro-Regular';
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__title {
+  padding-right: 10px;
+  text-decoration: underline;
+}
+
+.social__buttons {
+  width: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social__buttons_vk {
+  display: inline-block;
+  background-image: url('../images/vk.png');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.social__buttons_ok {
+  display: inline-block;
+  background-image: url('../images/ok.png');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.social__buttons_instagram {
+  display: inline-block;
+  background-image: url('../images/instagram.png');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
