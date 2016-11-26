@@ -1,9 +1,19 @@
 @import '../fonts/fonts.css';
 
-body{
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.content {
+  position: relative;
+  min-height: 100%;
+}
+
+.main {
+  padding-bottom: 50px;
 }
 
 .header {
@@ -121,15 +131,15 @@ body{
   padding: 0;
 }
 
+.button:hover {
+  background-color: #faab67;
+} 
+
 .button:active,
 .button:focus {
   background-color: #af723c;
   outline: none;
 }
-
-.button:hover {
-  background-color: #faab67;
-} 
 
 .button__title {
     color: #fffefe;
@@ -147,6 +157,12 @@ body{
   background-image: url('../images/bg_benefits.jpg');
 }
 
+.article_contacts {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../images/bg_contact.jpg'); 
+}
 .article__title {
   text-transform: uppercase;
   font-family: 'Carlito-bold';
@@ -161,6 +177,53 @@ body{
   background-image: url('../images/help.svg');
   width: 30px;
   height: 30px; 
+}
+
+.contacts {
+  line-height: 30px;
+}
+
+.contacts__item {
+    display: flex;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Carlito-bold';
+    margin: 0 auto;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.contacts__image {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.contacts__description {
+  padding-left: 38px;
+}
+
+.contacts__description_small {
+  color: #b2b2b2;
+  font-size: 14px;
+}
+
+.contacts__image_map {
+  background-image: url('../images/map.png');
+}
+
+.contacts__image_phone {
+  background-image: url('../images/phone.png');
+}
+
+.contacts__image_watsapp {
+  background-image: url('../images/watsapp.png');
+}
+
+.contacts__image_message {
+  background-image: url('../images/message.png');
 }
 
 .footer {

@@ -7,68 +7,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header class="header">
-    <div class="nav-bar">
-      <div class="nav-bar__logo">
-        <div class="nav-bar__image"></div> 
-        <div class="nav-bar__title">
-          <span class="nav-bar__title">Гражданское общество</span>
-          <span class="nav-bar__title nav-bar__title_small">юридическая фирма</span>
-        </div>
-      </div>
-      <div class="nav-bar__menu-button" onclick="showMenu()"> </button>
-    </div>
-    </div>
-    <div class="menu">
-      <ul class="menu__list">
-        <li class="menu__item">Главная</li>
-        <li class="menu__item">Преимущества</li>
-        <li class="menu__item">Услуги</li>
-        <li class="menu__item">Подписка</li>
-        <li class="menu__item">Контакты</li>
-      </ul>
-    </div>
-    <div class="header__content">
-      <div class="header__title">
-        Гражданское общество
-      </div>
-      <div class="header__description">
-        Компания по окозанию квалифицированных
-        юридических услуг
-      </div>
-      <div class="header__button">
-        <button class="button">
-          <span class="button__title">Оставить заявку для связи</span>
-        </button>
-      </div>
-    </div>
-    </header>
-
-    <main>
-      <article class="article article_benefits">
-        <span class="article__title">наши преимущества</span>
-        <div class="benefits">
-
-        </div>
-      </article>
-    </main>
-
-    <footer class=footer>
-      <div class="footer__content">
-        <div class="social">
-          <div class="social__title">
-            Мы в соц. сетях
-          </div>
-          <div class="social__buttons">
-            <div class="social__buttons_vk"></div>
-            <div class="social__buttons_ok"></div>
-            <div class="social__buttons_instagram"></div>
+    <div class="content">
+      <header class="header">
+      <div class="nav-bar">
+        <div class="nav-bar__logo">
+          <div class="nav-bar__image"></div> 
+          <div class="nav-bar__title">
+            <span class="nav-bar__title">Гражданское общество</span>
+            <span class="nav-bar__title nav-bar__title_small">юридическая фирма</span>
           </div>
         </div>
-
-        <div class="footer__copyright">© ИП Морозов И.П., 2016</div>
+        <div class="nav-bar__menu-button" onclick="showMenu()"> </button>
       </div>
-    </footer>
+      </div>
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">Главная</li>
+          <li class="menu__item">Преимущества</li>
+          <li class="menu__item">Услуги</li>
+          <li class="menu__item">Подписка</li>
+          <li class="menu__item">Контакты</li>
+        </ul>
+      </div>
+      <div class="header__content">
+        <div class="header__title">
+          Гражданское общество
+        </div>
+        <div class="header__description">
+          Компания по окозанию квалифицированных
+          юридических услуг
+        </div>
+        <div class="header__button">
+          <button class="button">
+            <span class="button__title">Оставить заявку для связи</span>
+          </button>
+        </div>
+      </div>
+      </header>
+
+      <main class="main">
+        <article class="article article_benefits">
+          <span class="article__title">наши преимущества</span>
+          <div class="benefits">
+
+          </div>
+        </article>
+        <article class="article">
+          <span class="article__title">оформить подписку</span>
+          <div class="contacts">
+            <div class="contacts__map"></div>
+          </div>
+        </article>
+        
+        <article class="article article_contacts">
+          <span class="article__title">контакты</span>
+          <div class="contacts">
+            <div class="contacts__item">
+              <div class="contacts__image contacts__image_map"></div>
+              <div class="contacts__description">
+                г. Томск, ул Котовского 19<br>
+                <span class="contacts__description_small">
+                  (ТЦ Метрополис), центральный вход
+                </span>
+              </div>
+            </div>
+
+            <div class="contacts__item">
+              <div class="contacts__image contacts__image_phone"></div>
+              <div class="contacts__description">
+                +7-929-302-20-16
+              </div>
+            </div>
+
+            <div class="contacts__item">
+              <div class="contacts__image contacts__image_watsapp"></div>
+              <div class="contacts__description">
+                +7-929-302-20-16
+              </div>
+            </div>
+
+            <div class="contacts__item">
+              <div class="contacts__image contacts__image_message"></div>
+              <div class="contacts__description">
+                go_tsk@mail.ru
+              </div>
+            </div>
+          </div>
+
+          <div class="header__button">
+            <button class="button">
+              <span class="button__title">Оставить заявку для связи</span>
+            </button>
+          </div>
+        </article>
+      </main>
+
+      <footer class=footer>
+        <div class="footer__content">
+          <div class="social">
+            <div class="social__title">
+              Мы в соц. сетях
+            </div>
+            <div class="social__buttons">
+              <div class="social__buttons_vk"></div>
+              <div class="social__buttons_ok"></div>
+              <div class="social__buttons_instagram"></div>
+            </div>
+          </div>
+
+          <div class="footer__copyright">© ИП Морозов И.П., 2016</div>
+        </div>
+      </footer>
+    </div>
     <script src="scripts/javascript.js" defer></script>
   </body>
 </html>
