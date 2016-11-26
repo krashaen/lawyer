@@ -148,13 +148,53 @@ html {
     font-size: 16px;
 }
 .arrticle {
-
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .article_benefits {
-  background-repeat: no-repeat;
-  background-size: 100%;
   background-image: url('../images/bg_benefits.jpg');
+}
+
+.article_sub {
+  background-image: url('../images/sub.png');
+  font-family: 'Carlito';
+  font-size: 14px;
+}
+
+.sub {
+  background-color: #ffffff;
+  text-align: center;
+  margin: 0 4%;
+  margin-top: 20px;
+}
+
+.sub__container {
+  color: #ffffff;
+  background-color: #3d4b5c;
+  padding-top: 17px;
+}
+
+.sub__cost {
+  font-size: 55px;
+  padding-top: 35px;
+  padding-bottom: 68px;
+}
+
+.sub__cost_small {
+  font-size: 36px;
+}
+
+.sub__description {
+  font-size: 13px;
+  color: #61768f;
+  line-height: 70px;
+}
+
+.sub__button {
+  margin: 0 22%;
+  height: 35px;
+  padding-bottom: 10px;
 }
 
 .article_contacts {
