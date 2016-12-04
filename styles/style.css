@@ -20,7 +20,11 @@ html {
 
 .header {
   background-image: url('../images/bg_header.jpg');
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 480px;
+  position: relative;
 }
 
 .header__content {
@@ -94,6 +98,11 @@ html {
   background-image: url('../images/menu.png');
   height: 17px;
   width: 25px;
+  cursor: pointer;
+}
+
+.nav-bar__menu-button_active {
+  background-image: url('../images/menu_active.png');
 }
 
 .menu {
@@ -103,6 +112,8 @@ html {
 
 .menu_visible {
   display: block;
+  position: absolute;
+  width: 100%;
 }
 
 .menu__list {
@@ -111,7 +122,6 @@ html {
   list-style-type: none;
   text-align: center;
   font-family: 'Carlito';
-  color: #e8e8e8; 
 }
 
 .menu__item {
@@ -120,6 +130,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #ffffff; 
+}
+
+.menu__link:active {
+  color: #faa256;
 }
 
 .button {
@@ -276,6 +295,8 @@ html {
 
 .contacts {
   line-height: 30px;
+  max-width: 290px;
+  margin: 0 auto;
 }
 
 .contacts__item {
