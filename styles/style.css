@@ -500,3 +500,46 @@ summary::-moz-details-marker {
   width: 20px;
   height: 20px;
 }
+
+.call-modal {
+  background-color: #293a4d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  align-items: center;
+}
+
+.call-modal__wpapper {
+  display: none;
+  position: absolute;
+  width: 100%;
+  opacity: 0.97;
+  height: 254px;
+  z-index: 999;
+  bottom: 350px;
+  top: 0;
+}
+.call-modal__title_text {
+  font-family: 'Carlito-bold';
+  font-size: 36px;
+}
+
+.call-modal__description {
+  text-align: center;
+  padding: 0 5px;
+}
+
+.call-modal__button {
+  width: 80%;
+  height: 45px;
+  padding-top: 20px
+}
+
+.not-visible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}

@@ -38,7 +38,7 @@
           юридических услуг
         </div>
         <div class="header__button">
-          <button class="button">
+          <button class="button" onclick="openModal('call-modal__wpapper')">
             <span class="button__title">Оставить заявку для связи</span>
           </button>
         </div>
@@ -355,7 +355,7 @@
           </div>
 
           <div class="contacts__button">
-            <button class="button">
+            <button class="button" onclick="openModal('call-modal__wpapper')">
               <span class="button__title">Оставить заявку для связи</span>
             </button>
           </div>
@@ -378,9 +378,29 @@
           <div class="footer__copyright">© ИП Морозов И.П., 2016</div>
         </div>
       </footer>
-    </div>
-    <script src="scripts/javascript.js" defer></script>
+
+      <div class="call-modal__wpapper">
+        <div class="call-modal">
+          <div class="call-modal__title">
+            <div class="call-modal__title_image"></div>
+            <p class="call-modal__title_text">
+              Заявка принята!
+            </p>
+          </div>
+          <p class="call-modal__description">
+            В ближайшее время наш специалист с 
+            вами свяжется
+          </p>
+          <div class="call-modal__button">
+            <button class="button" onclick="closeModal('call-modal__wpapper')">
+              <span class="button__title">Продолжить</span>
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
   </body>
 </html>
+<script src="scripts/javascript.js" defer></script>
 
 

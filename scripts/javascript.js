@@ -35,10 +35,10 @@ function showCurrentItem (itemClassName) {
 
 function showTab(event) {
   var tab = event.target.getAttribute('tab');
-  var tabElement = document.querySelector(`[tab=${tab}]`)
-  isTabVisible('tabs__item');
-  if (tabElement.className === 'tabs__item') tabElement.className = 'tabs__item tabs__item_visible'
-  else tabElement.className = 'tabs__item';
+  var tabElement = document.querySelector(`[tab=${tab}]`);
+  isTabVisible(tabElement.className);
+  tabElement.className === 'tabs__item' ? tabElement.className = 'tabs__item tabs__item_visible'
+  : tabElement.className = 'tabs__item';
   if (tab === 'physical') {
     isVisibleItem('juristical');
     showCurrentItem('physical');
@@ -46,4 +46,14 @@ function showTab(event) {
     isVisibleItem('physical');
     showCurrentItem('juristical');
   }
+}
+
+function closeModal(className) {
+  var element = document.getElementsByClassName(className);
+  element[0].className = className + ' not-visible';
+}
+
+function openModal(className) {
+  var element = document.getElementsByClassName(className);
+  element[0].className = className + ' visible';
 }
