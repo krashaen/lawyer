@@ -502,7 +502,6 @@ summary::-moz-details-marker {
 }
 
 .call-modal {
-  background-color: #293a4d;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -512,13 +511,13 @@ summary::-moz-details-marker {
 
 .call-modal__wpapper {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   opacity: 0.97;
-  height: 254px;
   z-index: 999;
-  bottom: 350px;
+  bottom: 0;
   top: 0;
+  background-color: #293a4d;
 }
 .call-modal__title_text {
   font-family: 'Carlito-bold';
@@ -541,5 +540,7 @@ summary::-moz-details-marker {
 }
 
 .visible {
-  display: block;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
