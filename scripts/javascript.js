@@ -51,9 +51,11 @@ function showTab(event) {
 function closeModal(className) {
   var element = document.getElementsByClassName(className);
   element[0].className = className + ' not-visible';
+  document.body.style.overflow = 'auto';
 }
 
 function openModal(className) {
   var element = document.getElementsByClassName(className);
   element[0].className = className + ' visible';
+  document.body.style.overflow = 'hidden';
 }

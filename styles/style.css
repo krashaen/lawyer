@@ -5,6 +5,7 @@
   padding: 0;
   text-decoration: none;
 }
+
 body,
 html {
   margin: 0;
@@ -33,11 +34,11 @@ html {
 }
 
 .header__content {
-    display: flex;
-    height: 85%;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 8px; 
+  display: flex;
+  height: 85%;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 8px; 
 }
 
 .header__title {
@@ -168,11 +169,12 @@ html {
 }
 
 .button__title {
-    color: #fffefe;
-    font-family: 'Carlito';
-    text-align: center;
-    font-size: 16px;
+  color: #fffefe;
+  font-family: 'Carlito';
+  text-align: center;
+  font-size: 16px;
 }
+
 .arrticle {
   background-repeat: no-repeat;
   background-size: contain;
@@ -304,6 +306,7 @@ summary::-moz-details-marker {
 :focus{
   outline: none;
 }
+
 .sub {
   background-color: #ffffff;
   text-align: center;
@@ -378,7 +381,6 @@ summary::-moz-details-marker {
   margin-top: 10px;
   display: block;
 }
-
 
 .contacts {
   line-height: 30px;
@@ -514,14 +516,41 @@ summary::-moz-details-marker {
   position: fixed;
   width: 100%;
   opacity: 0.97;
+  z-index: 990;
+  bottom: 0;
+  top: 0;
+  background-color: #293a4d;
+}
+
+.call-modal-accept {
+  display: none;
+  position: fixed;
+  width: 100%;
+  opacity: 0.97;
   z-index: 999;
   bottom: 0;
   top: 0;
   background-color: #293a4d;
 }
+
+.call-modal__title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.call-modal__title_image {
+  background-image: url('../images/accept.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 35px;
+  width: 35px;
+  padding-right: 20px;
+}
+
 .call-modal__title_text {
   font-family: 'Carlito-bold';
-  font-size: 36px;
+  font-size: 24px;
 }
 
 .call-modal__description {
@@ -533,6 +562,39 @@ summary::-moz-details-marker {
   width: 80%;
   height: 45px;
   padding-top: 20px
+}
+
+.call-modal__form {
+  width: 95%;
+}
+
+.call-modal__input {
+  height: 45px;
+  width: 88%;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  color: #919191;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 15px;
+  padding-left: 35px;
+  padding-right: 10px;
+}
+
+.call-modal__input_name {
+  background-image: url('../images/input_name.png');
+}
+
+.call-modal__input_phone {
+  background-image: url('../images/input_phone.png');
+}
+
+.call-modal__input_email {
+  background-image: url('../images/input_email.png');
 }
 
 .not-visible {

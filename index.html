@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="content">
+
       <header class="header">
       <div class="nav-bar">
         <div class="nav-bar__logo">
@@ -20,6 +21,7 @@
         <div class="nav-bar__menu-button" onclick="showMenu()"> </button>
       </div>
       </div>
+
       <div class="menu">
         <ul class="menu__list">
           <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
@@ -29,6 +31,7 @@
           <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
         </ul>
       </div>
+
       <div class="header__content">
         <div class="header__title">
           Гражданское общество
@@ -46,6 +49,7 @@
       </header>
 
       <main class="main">
+
         <article class="article article_benefits" id="benefits">
           <span class="article__title">наши преимущества</span>
           <div class="article__border"></div>
@@ -77,15 +81,17 @@
           <span class="article__title">наши услуги</span>
           <div class="article__border"></div>
           <div class="services">
+
             <div class="tabs">
-              <div class="tabs__item" onclick="showTab(event)" tab="physical">
+              <div class="tabs__item tabs__item_visible" onclick="showTab(event)" tab="physical">
                 Для физических лиц
               </div>
               <div class="tabs__item" onclick="showTab(event)" tab="juristical">
                 Для юридических лиц
               </div>
             </div>
-            <div class="physical">
+
+            <div class="physical physical_visible">
               <details class="services__item">
                 <summary class="services__item_title">
                   <div class="services__item_wrapper">
@@ -185,6 +191,7 @@
             </div>
 
             <div class="juristical">
+
               <details class="services__item">
                   <summary class="services__item_title">
                     <div class="services__item_wrapper">
@@ -201,6 +208,7 @@
                   </p>
                 </details>
             </div>
+
           </div>
         </article>
 
@@ -217,6 +225,7 @@
             полноценный продукт готовый к внедрению в
             вашу жизнь.
           </div>
+
           <div class="sub">
             <div class="sub__container">
               <div class="sub__title">
@@ -277,8 +286,8 @@
                 <span>
               </div>
               <span class="sub__cost_desc">
-                  в месяц
-                </span>
+                в месяц
+              </span>
             </div>
             <div class="sub__description">
               Вы экономите 500 руб
@@ -321,6 +330,7 @@
         <article class="article article_contacts" id="contacts">
           <span class="article__title">контакты</span>
           <div class="article__border"></div>
+
           <div class="contacts">
             <div class="contacts__item">
               <div class="contacts__image contacts__image_map"></div>
@@ -379,7 +389,7 @@
         </div>
       </footer>
 
-      <div class="call-modal__wpapper">
+      <div class="call-modal-accept">
         <div class="call-modal">
           <div class="call-modal__title">
             <div class="call-modal__title_image"></div>
@@ -392,12 +402,33 @@
             вами свяжется
           </p>
           <div class="call-modal__button">
-            <button class="button" onclick="closeModal('call-modal__wpapper')">
+            <button class="button" onclick="closeModal('call-modal-accept')">
               <span class="button__title">Продолжить</span>
             </button>
           </div>
         </div>
       </div>
+
+      <div class="call-modal__wpapper">
+        <div class="call-modal">
+          <div class="call-modal__title">
+            <p class="call-modal__title_text">
+              Оставить заявку для связи
+            </p>
+          </div>
+          <div class="call-modal__form">
+            <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
+            <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
+            <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+          </div>
+          <div class="call-modal__button">
+            <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+              <span class="button__title">Оставить заявку</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
   </div>
   </body>
 </html>
