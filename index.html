@@ -11,17 +11,47 @@
     <div class="content">
 
       <header class="header">
-      <div class="nav-bar">
-        <div class="nav-bar__logo">
-          <div class="nav-bar__image"></div> 
-          <div class="nav-bar__title">
-            <span class="nav-bar__title">Гражданское общество</span>
-            <span class="nav-bar__title nav-bar__title_small">юридическая фирма</span>
+        <div class="header-overflow">
+          <div class="header-overflow__contacts">
+            <div class="contact-item">
+              <div class="contact-item__image contact-item__image_adress"></div>
+              <div class="contact-item__text">г. Томск, ул Котовского 19</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__image contact-item__image_phone"></div>
+              <div class="contact-item__text">+7-929-302-20-16</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item__image contact-item__image_email"></div>
+              <div class="contact-item__text">go_tsk@mail.ru</div>
+            </div>
+          </div>
+          
+          <div class="social__buttons">
+              <div class="social__buttons_vk"></div>
+              <div class="social__buttons_ok"></div>
+              <div class="social__buttons_instagram"></div>
+            </div>
+        </div>
+        <div class="nav-bar">
+          <div class="nav-bar__logo">
+            <div class="nav-bar__image"></div> 
+            <div class="nav-bar__title">
+              <span class="nav-bar__title">Гражданское общество</span>
+              <span class="nav-bar__title nav-bar__title_small">юридическая фирма</span>
+            </div>
+          </div>
+          <div class="nav-bar__menu-button" onclick="showMenu()"></div>
+          <div class="header-menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
+              <li class="menu__item"><a href="#benefits" class="menu__link">Преимущества<a></li>
+              <li class="menu__item"><a href="#services" class="menu__link">Услуги</a></li>
+              <li class="menu__item"><a href="#sub" class="menu__link">Подписка</a></li>
+              <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+            </ul>
           </div>
         </div>
-        <div class="nav-bar__menu-button" onclick="showMenu()"> </button>
-      </div>
-      </div>
 
       <div class="menu">
         <ul class="menu__list">
@@ -34,17 +64,48 @@
       </div>
 
       <div class="header__content">
+        <div class="header-content__wripper">
         <div class="header__title">
           Гражданское общество
         </div>
         <div class="header__description">
           Компания по окозанию квалифицированных
           юридических услуг
+          <span class="header__description_full">
+            гражданам и юридическим лицам
+          </span>
         </div>
         <div class="header__button">
           <button class="button" onclick="openModal('call-modal__wpapper')">
             <span class="button__title">Оставить заявку для связи</span>
           </button>
+        </div>
+          <ul class="service-list">
+            <li class="service-list__item"><span class="service-list__text">Бесплатные Юридические консультации</span></li>
+            <li class="service-list__item"><span class="service-list__text">Состовляем правовые документы</span></li>
+            <li class="service-list__item"><span class="service-list__text">Представляем интересы в суде</span></li>
+            <li class="service-list__item"><span class="service-list__text">Занимаемся просвитительской работой</span></li>
+            <li class="service-list__item"><span class="service-list__text">Построение доверительных и долгосрочных отношений с клиентами</span></li>
+          </ul>
+        </div>
+                <div class="header__form">
+          <div class="call-modal">
+            <div class="call-modal__title">
+              <p class="call-modal__title_text">
+                Оставить заявку для связи
+              </p>
+            </div>
+            <div class="call-modal__form">
+              <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
+              <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
+              <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+            </div>
+            <div class="call-modal__button">
+              <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                <span class="button__title">Оставить заявку</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       </header>
@@ -54,27 +115,28 @@
         <article class="article article_benefits" id="benefits">
           <span class="article__title">наши преимущества</span>
           <div class="article__border"></div>
+          <div class="benefits__wrapper">
+            <div class="benefits">
+              <div class="benefits__image benefits__image_help"></div>
+              <span class="benefits__title">
+                Самая оперативная
+                юридическая помощь
+              </span>
+            </div>
 
-          <div class="benefits">
-            <div class="benefits__image benefits__image_help"></div>
-            <span class="benefits__title">
-              Самая оперативная
-              юридическая помощь
-            </span>
-          </div>
+            <div class="benefits">
+              <div class="benefits__image benefits__image_solution"></div>
+              <span class="benefits__title">
+                Готовое решение
+              </span>
+            </div>
 
-          <div class="benefits">
-            <div class="benefits__image benefits__image_solution"></div>
-            <span class="benefits__title">
-              Готовое решение
-            </span>
-          </div>
-
-          <div class="benefits">
-            <div class="benefits__image benefits__image_service"></div>
-            <span class="benefits__title">
-              Услуги онлайн
-            </span>
+            <div class="benefits">
+              <div class="benefits__image benefits__image_service"></div>
+              <span class="benefits__title">
+                Услуги онлайн
+              </span>
+            </div>
           </div>
         </article>
 
