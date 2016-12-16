@@ -6,6 +6,19 @@
     <link href="styles/style.css" rel="stylesheet">
     <link href="styles/media-queries.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+      var map;
+
+      DG.then(function () {
+          map = DG.map('map', {
+              center: [56.460721, 84.966396],
+              zoom: 17
+          });
+
+          DG.marker([56.460721, 84.966396]).addTo(map).bindPopup('Гражданское общество');
+      });
+    </script>
   </head>
   <body>
     <div class="content">
@@ -435,6 +448,9 @@
               <span class="button__title">Оставить заявку для связи</span>
             </button>
           </div>
+
+          <div id="map" class="contacts__map"> 
+          </div>
         </article>
       </main>
 
@@ -499,5 +515,4 @@
   </body>
 </html>
 <script src="scripts/javascript.js" defer></script>
-
 
