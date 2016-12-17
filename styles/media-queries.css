@@ -99,5 +99,26 @@
     .services__item_description {
         margin-left: 35px;
     }
+    .article__title_contacts {
+        display: none;
+    }
+    .article__title_size_full{
+        display: block;
+    }
+    .contacts__wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 55px;
+    }
+    .contacts__button {
+        display: none;
+    }
+    .contacts__form {
+        display: block;
+        width: 280px;
+    }
+    .contacts__map {
+        display: block;
+    }
 }
 }

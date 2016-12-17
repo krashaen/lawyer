@@ -245,6 +245,10 @@ html {
   padding-top: 16px;
 }
 
+.article__title_size_full {
+  display: none;
+}
+
 .article__border {
   height: 10px;
   background-image: url('../images/titleborder.png');
@@ -485,10 +489,13 @@ summary::-moz-details-marker {
   height: 40px;
   padding-top: 24px;
 }
-
+.contacts__form {
+  display: none;
+}
 .contacts__map {
   width: 100%;
   height: 400px;
+  display: none;
 }
 
 .footer {

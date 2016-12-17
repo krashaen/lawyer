@@ -101,7 +101,7 @@
             <li class="service-list__item"><span class="service-list__text">Построение доверительных и долгосрочных отношений с клиентами</span></li>
           </ul>
         </div>
-                <div class="header__form">
+        <div class="header__form">
           <div class="call-modal">
             <div class="call-modal__title">
               <p class="call-modal__title_text">
@@ -407,48 +407,70 @@
         </article>
         
         <article class="article article_contacts" id="contacts">
-          <span class="article__title">контакты</span>
+          <span class="article__title article__title_contacts">контакты</span>
+          <span class="article__title article__title_size_full">как с нами связаться</span>
           <div class="article__border"></div>
-
-          <div class="contacts">
-            <div class="contacts__item">
-              <div class="contacts__image contacts__image_map"></div>
-              <div class="contacts__description">
-                г. Томск, ул Котовского 19<br>
-                <span class="contacts__description_small">
-                  (ТЦ Метрополис), центральный вход
-                </span>
-              </div>
+          <div class="contacts__wrapper">
+          <div class="contacts__form">
+          <div class="call-modal">
+            <div class="call-modal__title">
+              <p class="call-modal__title_text">
+                Оставить заявку для связи
+              </p>
             </div>
-
-            <div class="contacts__item">
-              <div class="contacts__image contacts__image_phone"></div>
-              <div class="contacts__description">
-                +7-929-302-20-16
-              </div>
+            <div class="call-modal__form">
+              <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
+              <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
+              <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
             </div>
-
-            <div class="contacts__item">
-              <div class="contacts__image contacts__image_watsapp"></div>
-              <div class="contacts__description">
-                +7-929-302-20-16
-              </div>
+            <div class="call-modal__button">
+              <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                <span class="button__title">Оставить заявку</span>
+              </button>
             </div>
+          </div>
+        </div>
 
-            <div class="contacts__item">
-              <div class="contacts__image contacts__image_message"></div>
-              <div class="contacts__description">
-                go_tsk@mail.ru
+          <div class="contacts__content">
+            <div class="contacts">
+              <div class="contacts__item">
+                <div class="contacts__image contacts__image_map"></div>
+                <div class="contacts__description">
+                  г. Томск, ул Котовского 19<br>
+                  <span class="contacts__description_small">
+                    (ТЦ Метрополис), центральный вход
+                  </span>
+                </div>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__image contacts__image_phone"></div>
+                <div class="contacts__description">
+                  +7-929-302-20-16
+                </div>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__image contacts__image_watsapp"></div>
+                <div class="contacts__description">
+                  +7-929-302-20-16
+                </div>
+              </div>
+
+              <div class="contacts__item">
+                <div class="contacts__image contacts__image_message"></div>
+                <div class="contacts__description">
+                  go_tsk@mail.ru
+                </div>
               </div>
             </div>
           </div>
-
           <div class="contacts__button">
             <button class="button" onclick="openModal('call-modal__wpapper')">
               <span class="button__title">Оставить заявку для связи</span>
             </button>
           </div>
-
+          </div>
           <div id="map" class="contacts__map"> 
           </div>
         </article>
