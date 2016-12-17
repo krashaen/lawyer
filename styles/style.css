@@ -522,6 +522,19 @@ summary::-moz-details-marker {
   font-size: 13px;
 }
 
+.footer__logo {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer__description_size_full {
+  display: none;
+}
+
 .social {
   display: flex;
   align-items: center;
