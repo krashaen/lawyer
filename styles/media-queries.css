@@ -34,13 +34,13 @@
 .header-menu {
   display: block;
   line-height: 4rem;
-  padding-bottom: 15px;
+  padding-bottom: 4px;
 }
 .menu__item {
   display: inline-block;
   border: none;
   height: 100%;
-  padding: 0 5px;
+  padding-right: 15px;
 }
 .menu__link {
   display: inline-block;
