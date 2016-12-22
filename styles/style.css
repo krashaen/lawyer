@@ -46,6 +46,7 @@ html {
 }
 .contact-item {
   display: flex;
+  padding-right: 40px;
 }
 .contact-item__image {
   background-repeat: no-repeat;
@@ -131,8 +132,10 @@ html {
 
 .nav-bar__image {
   background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
   height: 30px;
   width: 30px;
+  background-size: contain;
 }
 
 .nav-bar__title {
@@ -393,7 +396,10 @@ summary::-moz-details-marker {
 .sub__description {
   font-size: 13px;
   color: #61768f;
-  padding: 27px 0;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sub__button {

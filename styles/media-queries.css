@@ -1,9 +1,23 @@
 @media screen and (min-width: 900px) {
+    .header {
+      height: 100%;
+    }
     .header-overflow {
         display: flex;
     }
     .nav-bar {
         background-color: #344960;
+    }
+    .nav-bar__title {
+      font-size: 18px;
+      word-spacing: 3px;
+    }
+    .nav-bar__title_small {
+      font-size: 14px;
+    }
+    .nav-bar__image {
+      width: 45px;
+      height: 45px;
     }
     .nav-bar__menu-button {
         display: none;
@@ -14,10 +28,17 @@
     .menu__item {
         display: inline;
         border: none;
+        padding-right: 15px;
     }
     .menu__link:hover {
         color: #f39f57;
         border-bottom: 1px solid #e97e22;
+    }
+    .header__description {
+      padding-top: 13px;
+      line-height: 20px;
+      width: 85%;
+      font-size: 16px;
     }
     .header__description_full {
         display: inline;
@@ -35,9 +56,11 @@
     .header__content {
         flex-direction: row;
         justify-content: space-around;
+        padding-top: 81px;
+        padding-bottom: 86px;
     }
     .header-content__wripper {
-        width: 560px;
+      width: 560px;
     }
     .header__description {
         text-align: inherit;
@@ -47,9 +70,12 @@
     }
     .service-list {
         display:block;
+        padding-left: 81px;
+        padding-top: 25px;
+        line-height: 34px;
     }
     .call-modal__form {
-    width: 100%;
+        width: 100%;
     }
     .call-modal__input {
         width: 100%;
@@ -58,6 +84,7 @@
     }
     .call-modal__button {
         width: 100%;
+        padding-top: 0;
     }
     .sub {
         width: 280px;
@@ -71,7 +98,9 @@
         flex-flow: row wrap;
         justify-content: space-around;
     }
-
+    .article__title {
+      font-size: 22px;
+    }
     .benefits__wrapper {
         display: flex;
         width: 100%;
@@ -154,10 +183,11 @@
         flex-direction: row-reverse; 
     }
     .footer__copyright {
-        width: 42%;
+        width: 75%;
     }
     .footer__logo {
         display: block;
+        margin-right: 35px;
     }
     .footer__description {
         display: block;
