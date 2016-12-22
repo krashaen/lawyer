@@ -161,10 +161,14 @@
     .tabs__item_visible {
     background-image: url('../images/tab_desktop.png');
     }
+    .contacts {
+      max-width: 295px
+    }
     .contacts__wrapper {
         display: flex;
         justify-content: space-around;
         padding-bottom: 55px;
+        padding-top: 35px;
     }
     .contacts__button {
         display: none;

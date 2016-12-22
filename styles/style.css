@@ -446,6 +446,13 @@ summary::-moz-details-marker {
   margin: 0 auto;
 }
 
+.contacts__title {
+  color: #e99751;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  display: inherit;
+}
 .contacts__item {
     display: flex;
     color: #ffffff;
