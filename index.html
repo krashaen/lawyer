@@ -317,8 +317,8 @@
               Идеально для знакомства с нашей компанией
             </div>
             <div class="sub__button">
-              <button class="button">
-                <span class="button__title">Получить</span>
+              <button class="button" onclick="showSubModal('Получение')">
+                <span class="button__title">Подписаться</span>
               </button>
             </div>
           </div>
@@ -345,7 +345,7 @@
               неограниченное число консультаций
             </div>
             <div class="sub__button">
-              <button class="button">
+              <button class="button" onclick="showSubModal('1 месяц')">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
@@ -371,7 +371,7 @@
               Вы экономите 500 руб
             </div>
             <div class="sub__button">
-              <button class="button">
+              <button class="button" onclick="showSubModal('2 месяца')">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
@@ -397,7 +397,7 @@
               Вы экономите 1150 руб
             </div>
             <div class="sub__button">
-              <button class="button">
+              <button class="button" onclick="showSubModal('3 месяца')">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
@@ -407,69 +407,71 @@
         </article>
         
         <article class="article article_contacts" id="contacts">
-          <span class="article__title article__title_contacts">контакты</span>
-          <span class="article__title article__title_size_full">как с нами связаться</span>
-          <div class="article__border"></div>
-          <div class="contacts__wrapper">
-          <div class="contacts__form">
-          <div class="call-modal">
-            <div class="call-modal__title">
-              <p class="call-modal__title_text">
-                Оставить заявку для связи
-              </p>
+          <div class="article__background">
+            <span class="article__title article__title_contacts">контакты</span>
+            <span class="article__title article__title_size_full">как с нами связаться</span>
+            <div class="article__border"></div>
+            <div class="contacts__wrapper">
+            <div class="contacts__form">
+            <div class="call-modal">
+              <div class="call-modal__title">
+                <p class="call-modal__title_text">
+                  Оставить заявку для связи
+                </p>
+              </div>
+              <div class="call-modal__form">
+                <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
+                <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
+                <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+              </div>
+              <div class="call-modal__button">
+                <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                  <span class="button__title">Оставить заявку</span>
+                </button>
+              </div>
             </div>
-            <div class="call-modal__form">
-              <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
-              <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
-              <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+          </div>
+
+            <div class="contacts__content">
+              <span class="contacts__title">Контакты</span>
+              <div class="contacts">
+                <div class="contacts__item">
+                  <div class="contacts__image contacts__image_map"></div>
+                  <div class="contacts__description">
+                    г. Томск, ул Котовского 19<br>
+                    <span class="contacts__description_small">
+                      (ТЦ Метрополис), центральный вход
+                    </span>
+                  </div>
+                </div>
+
+                <div class="contacts__item">
+                  <div class="contacts__image contacts__image_phone"></div>
+                  <div class="contacts__description">
+                    +7-929-302-20-16
+                  </div>
+                </div>
+
+                <div class="contacts__item">
+                  <div class="contacts__image contacts__image_watsapp"></div>
+                  <div class="contacts__description">
+                    +7-929-302-20-16
+                  </div>
+                </div>
+
+                <div class="contacts__item">
+                  <div class="contacts__image contacts__image_message"></div>
+                  <div class="contacts__description">
+                    go_tsk@mail.ru
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="call-modal__button">
-              <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
-                <span class="button__title">Оставить заявку</span>
+            <div class="contacts__button">
+              <button class="button" onclick="openModal('call-modal__wpapper')">
+                <span class="button__title">Оставить заявку для связи</span>
               </button>
             </div>
-          </div>
-        </div>
-
-          <div class="contacts__content">
-            <span class="contacts__title">Контакты</span>
-            <div class="contacts">
-              <div class="contacts__item">
-                <div class="contacts__image contacts__image_map"></div>
-                <div class="contacts__description">
-                  г. Томск, ул Котовского 19<br>
-                  <span class="contacts__description_small">
-                    (ТЦ Метрополис), центральный вход
-                  </span>
-                </div>
-              </div>
-
-              <div class="contacts__item">
-                <div class="contacts__image contacts__image_phone"></div>
-                <div class="contacts__description">
-                  +7-929-302-20-16
-                </div>
-              </div>
-
-              <div class="contacts__item">
-                <div class="contacts__image contacts__image_watsapp"></div>
-                <div class="contacts__description">
-                  +7-929-302-20-16
-                </div>
-              </div>
-
-              <div class="contacts__item">
-                <div class="contacts__image contacts__image_message"></div>
-                <div class="contacts__description">
-                  go_tsk@mail.ru
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="contacts__button">
-            <button class="button" onclick="openModal('call-modal__wpapper')">
-              <span class="button__title">Оставить заявку для связи</span>
-            </button>
           </div>
           </div>
           <div id="map" class="contacts__map"> 
@@ -525,6 +527,29 @@
             </button>
           </div>
         </div>
+      </div>
+
+      <div class="sub-modal">
+        <div class="sub-modal__content">
+          <div class="sub-modal__title">
+            <p class="sub-modal__title_name">
+              Подписка
+            </p>
+            <p class="sub-modal__title_text">
+              на <span class="sub-modal__details"></span> юридических услуг
+            </p>
+          </div>
+          <form class="user-info">
+            <input class="user-info__item user-info__item_name" placeholder="Ваше имя и фамилия *"/>
+            <input class="user-info__item user-info__item_number" placeholder="Ваше номер телефона *"/>
+            <div class="sub-modal__button">
+              <button class="button" onclick="openModal('call-modal-accept'); closeModal('sub-modal')">
+                <span class="button__title">Подписаться</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="sub-modal__close-button" onclick="closeModal('sub-modal')"></div>
       </div>
 
       <div class="call-modal__wpapper">

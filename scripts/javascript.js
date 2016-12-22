@@ -48,6 +48,14 @@ function showTab(event) {
   }
 }
 
+function showSubModal(count) {
+  var countModal = document.getElementsByClassName('sub-modal__details');
+  var modal = document.getElementsByClassName('sub-modal');
+  countModal[0].innerText = count;
+  modal[0].className = 'sub-modal visible';
+  document.body.style.overflow = 'hidden'; 
+}
+
 function closeModal(className) {
   var element = document.getElementsByClassName(className);
   element[0].className = className + ' not-visible';
@@ -59,3 +67,4 @@ function openModal(className) {
   element[0].className = className + ' visible';
   document.body.style.overflow = 'hidden';
 }
+

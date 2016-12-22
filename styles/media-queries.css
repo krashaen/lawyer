@@ -1,3 +1,11 @@
+@media screen and (max-width: 900px) {
+  .sub-modal__content{
+    width: 90%;
+  }
+  .user-info {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 900px) {
     .header {
       height: 100%;
@@ -6,7 +14,8 @@
         display: flex;
     }
     .nav-bar {
-        background-color: #344960;
+      height: 60px;
+      background-color: #344960;
     }
     .nav-bar__title {
       font-size: 18px;
@@ -23,16 +32,23 @@
         display: none;
     }
     .header-menu {
-        display: block;
+      display: block;
+      line-height: 4rem;
+      padding-bottom: 15px;
     }
     .menu__item {
-        display: inline;
-        border: none;
-        padding-right: 15px;
+      display: inline-block;
+      border: none;
+      height: 100%;
+      padding: 0 5px;
+    }
+    .menu__link {
+      display: inline-block;
+      height: 100%;
     }
     .menu__link:hover {
-        color: #f39f57;
-        border-bottom: 1px solid #e97e22;
+      border-bottom: 2px solid #e97e22;
+      color: #f39f57;
     }
     .header__description {
       padding-top: 13px;
@@ -161,8 +177,20 @@
     .tabs__item_visible {
     background-image: url('../images/tab_desktop.png');
     }
+    .article_contacts {
+      background-image: none;
+    }
     .contacts {
       max-width: 295px
+    }
+    .article__background {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url('../images/bg_contact.jpg');
+    }
+    .contacts__title {
+      display: block;
     }
     .contacts__wrapper {
         display: flex;
@@ -202,5 +230,4 @@
     .footer__description_size_full {
         display: block;
     }
-}
 }
