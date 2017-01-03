@@ -130,10 +130,7 @@
   padding-right: 4.4%;
   padding-top: 25px;
 }
-summary::-webkit-details-marker {
-  display: none
-}
-summary:after {
+summary::before {
   border-radius: 5px;
   content: "+";
   color: #fff;
@@ -145,12 +142,13 @@ summary:after {
   width: 20px;
   display: flex;
   align-items: center;
-  margin-top: -33px; 
+  padding-top: 10px;
 }
-details[open] summary:after {
-  content: "-";
+details[open] > summary::before {
+ content: '-';
 }
 .services__item_wrapper {
+  font-size: 16px;
   margin-left: 15px;
 }
 .services__item_title {
@@ -229,5 +227,8 @@ details[open] summary:after {
 }
 .footer__description_size_full {
   display: block;
+}
+.social__title {
+  width: 55%;
 }
 }
