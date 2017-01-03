@@ -12,11 +12,11 @@
 
       DG.then(function () {
           map = DG.map('map', {
-              center: [56.460721, 84.966396],
+              center: [56.486713, 84.979889],
               zoom: 17
           });
 
-        DG.marker([56.460721, 84.966396]).addTo(map).bindPopup('Гражданское общество');
+        DG.marker([56.486713, 84.979889]).addTo(map).bindPopup('Гражданское общество (ТЦ Остров, центральный вход, 5 этаж)');
       });
     </script>
   </head>
@@ -28,7 +28,7 @@
           <div class="header-overflow__contacts">
             <div class="contact-item">
               <div class="contact-item__image contact-item__image_adress"></div>
-              <div class="contact-item__text">г. Томск, ул Котовского 19</div>
+              <div class="contact-item__text">г. Томск, Комсомольский проспект 15а</div>
             </div>
             <div class="contact-item">
               <div class="contact-item__image contact-item__image_phone"></div>
@@ -41,9 +41,9 @@
           </div>
           
           <div class="social__buttons">
-              <div class="social__buttons_vk"></div>
-              <div class="social__buttons_ok"></div>
-              <div class="social__buttons_instagram"></div>
+              <a href="https://vk.com/go_tsk" target="_blank" class="social__buttons_vk"></a>
+              <a href="https://ok.ru/group/gotomsk" target="_blank" class="social__buttons_ok"></a>
+              <a href="https://instagram.com/go_tsk" target="_blank" class="social__buttons_instagram"></a>
             </div>
         </div>
         <div class="nav-bar">
@@ -112,11 +112,12 @@
               <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
               <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
               <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
-            </div>
-            <div class="call-modal__button">
-              <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
-                <span class="button__title">Оставить заявку</span>
-              </button>
+            
+              <div class="call-modal__button">
+                <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                  <span class="button__title">Оставить заявку</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -318,7 +319,7 @@
             </div>
             <div class="sub__button">
               <button class="button" onclick="showSubModal('Получение')">
-                <span class="button__title">Подписаться</span>
+                <span class="button__title">Получить за 300 р.</span>
               </button>
             </div>
           </div>
@@ -413,24 +414,24 @@
             <div class="article__border"></div>
             <div class="contacts__wrapper">
             <div class="contacts__form">
-            <div class="call-modal">
-              <div class="call-modal__title">
-                <p class="call-modal__title_text">
-                  Оставить заявку для связи
-                </p>
-              </div>
-              <div class="call-modal__form">
-                <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
-                <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
-                <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
-              </div>
-              <div class="call-modal__button">
-                <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
-                  <span class="button__title">Оставить заявку</span>
-                </button>
+              <div class="call-modal">
+                <div class="call-modal__title">
+                  <p class="call-modal__title_text">
+                    Оставить заявку для связи
+                  </p>
+                </div>
+                <div class="call-modal__form">
+                  <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
+                  <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
+                  <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+                </div>
+                <div class="call-modal__button">
+                  <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                    <span class="button__title">Оставить заявку</span>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
 
             <div class="contacts__content">
               <span class="contacts__title">Контакты</span>
@@ -438,9 +439,9 @@
                 <div class="contacts__item">
                   <div class="contacts__image contacts__image_map"></div>
                   <div class="contacts__description">
-                    г. Томск, ул Котовского 19<br>
+                    г. Томск, Комсомольский проспект 15а<br>
                     <span class="contacts__description_small">
-                      (ТЦ Метрополис), центральный вход
+                      (ТЦ Остров), центральный вход, 5 этаж
                     </span>
                   </div>
                 </div>
@@ -486,9 +487,9 @@
               Мы в соц. сетях
             </div>
             <div class="social__buttons">
-              <div class="social__buttons_vk"></div>
-              <div class="social__buttons_ok"></div>
-              <div class="social__buttons_instagram"></div>
+              <a href="https://vk.com/go_tsk" target="_blank" class="social__buttons_vk"></a>
+              <a href="https://ok.ru/group/gotomsk" target="_blank" class="social__buttons_ok"></a>
+              <a href="https://instagram.com/go_tsk" target="_blank" class="social__buttons_instagram"></a>
             </div>
           </div>
 
@@ -539,7 +540,7 @@
               на <span class="sub-modal__details"></span> юридических услуг
             </p>
           </div>
-          <form class="user-info">
+          <div class="user-info">
             <input class="user-info__item user-info__item_name" placeholder="Ваше имя и фамилия *"/>
             <input class="user-info__item user-info__item_number" placeholder="Ваше номер телефона *"/>
             <div class="sub-modal__button">
@@ -547,7 +548,7 @@
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
-          </form>
+          </div>
         </div>
         <div class="sub-modal__close-button" onclick="closeModal('sub-modal')"></div>
       </div>
@@ -563,11 +564,11 @@
             <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
             <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
             <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
-          </div>
-          <div class="call-modal__button">
-            <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
-              <span class="button__title">Оставить заявку</span>
-            </button>
+            <div class="call-modal__button">
+              <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                <span class="button__title">Оставить заявку</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
