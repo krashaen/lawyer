@@ -369,9 +369,12 @@ html {
   background-color: #f8f8f8;
   font-size: 13px;
   color: #465568;
-  padding: 10px 14px;
+  padding: 10px 20px;
 }
-
+.services__item_list {
+  margin-left: 15px;
+  color: #465568;
+}
 summary {
  display: block;
 }
