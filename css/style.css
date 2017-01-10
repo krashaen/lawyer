@@ -247,9 +247,10 @@ html {
   font-size: 16px;
 }
 
-.arrticle {
+.article {
   background-repeat: no-repeat;
   background-size: contain;
+  padding: 10px 0;
 }
 
 .article_contacts {
@@ -266,7 +267,6 @@ html {
   color: #faa256;
   text-align: center;
   display: block;
-  padding-top: 16px;
 }
 
 .article__title_size_full {
@@ -327,8 +327,10 @@ html {
 .tabs__item {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 9px 10px;
+  padding: 8px 10px;
+  min-width: 125px;
 }
 
 .tabs__item_visible {
