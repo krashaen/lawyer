@@ -285,7 +285,10 @@ html {
 .article__description {
   color: #53667c;
   padding: 0 4%;
-  line-height: 17px;
+  text-align: justify;
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 24px;
 }
 
 .article_benefits {
@@ -399,10 +402,7 @@ details[open] > summary::before {
   text-align: center;
   margin: 0 4%;
   margin-top: 20px;
-}
-
-.sub__title {
-  padding-bottom: 35px;
+  position: relative;
 }
 
 .sub__container {
@@ -410,10 +410,18 @@ details[open] > summary::before {
   background-color: #3d4b5c;
   padding-top: 17px;
   height: 187px;
+  position: relative;
 }
 
 .sub__cost {
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   font-size: 55px;
+  height: 80px;
 }
 
 .sub__cost_small {
@@ -426,18 +434,23 @@ details[open] > summary::before {
 }
 
 .sub__description {
-  font-size: 13px;
+  font-size: 15px;
+  padding: 20px;
+  padding-bottom: 55px;
   color: #61768f;
-  height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .sub__button {
-  margin: 0 22%;
   height: 35px;
-  padding-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
 }
 
 .benefits {
@@ -634,8 +647,8 @@ details[open] > summary::before {
 }
 
 .sub-modal__content {
+  padding: 20px 0;
   width: 480px;
-  height: 305px;
   background-color: #f2f2f2;
 }
 
@@ -671,6 +684,7 @@ details[open] > summary::before {
   background-image: url('../images/close_modal.png');
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .user-info {

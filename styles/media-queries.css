@@ -148,13 +148,14 @@ details[open] > summary::before {
  content: '-';
 }
 .services__item_wrapper {
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 15px;
 }
 .services__item_title {
   padding-left: 15px;
 }
 .services__item_description {
+  font-size: 16px;
   margin-left: 35px;
 }
 .article__title_contacts {
