@@ -675,7 +675,7 @@ details[open] > summary::before {
   height: 50px;
 }
 
-.sub-modal__close-button {
+.close-modal-button {
   width: 25px;
   height: 25px;
   position: absolute;
@@ -721,6 +721,10 @@ details[open] > summary::before {
   bottom: 0;
   top: 0;
   background-color: #293a4d;
+}
+
+.call-modal__close-button {
+
 }
 
 .call-modal-accept {

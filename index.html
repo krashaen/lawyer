@@ -3,10 +3,10 @@
   <head>
     <title>Гражданское общество</title>
     <meta charset="utf-8">
-    <link href="styles/style.css" rel="stylesheet">
-    <link href="styles/media-queries.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media-queries.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
     <script type="text/javascript">
       var map;
 
@@ -106,17 +106,17 @@
                 Оставить заявку для связи
               </p>
             </div>
-            <div class="call-modal__form">
-              <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
-              <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
-              <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+            <form class="call-modal__form js-call-modal-form" method="POST">
+              <input class="call-modal__input call-modal__input_name" name="name" type="text" required placeholder="Ваше ФИО*"/>
+              <input class="call-modal__input call-modal__input_phone" name="phone" type="tel" required placeholder="Ваш телефон*"/>
+              <input class="call-modal__input call-modal__input_email" name="email" type="email" required placeholder="Ваш email*"/> 
             
               <div class="call-modal__button">
-                <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+                <button class="button" type="submit">
                   <span class="button__title">Оставить заявку</span>
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -367,9 +367,7 @@
                       подготовка и составление искового
                       заявления/отзыва на исковое заявление;
                     </li>
-                    <li class="services__item_list">с
-                      оставление всех необходимых ходатайств;
-                    </li>
+                    <li class="services__item_list">составление всех необходимых ходатайств;</li>
                     <li class="services__item_list">устные консультации по делу;</li>
                     <li class="services__item_list">
                       письменные консультации по делу (при необходимости);
@@ -396,9 +394,9 @@
           <div class="article__description">
             Как часто, обратившись к юристу с вопросом,
             Вы получаете несколько страниц сухого текста
-            со ссылками на законы,из которого
+            со ссылками на законы, из которого
             совершенно непонятно, что же Вам делать
-            дальше!? Мы делаем наши консультации
+            дальше?! Мы делаем наши консультации
             понятными. Обращаясь к нам Вы получаете
             полноценный продукт готовый к внедрению в
             вашу жизнь.
@@ -508,16 +506,16 @@
                     Оставить заявку для связи
                   </p>
                 </div>
-                <div class="call-modal__form">
-                  <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
-                  <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
-                  <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
-                </div>
-                <div class="call-modal__button">
-                  <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
-                    <span class="button__title">Оставить заявку</span>
-                  </button>
-                </div>
+                <form class="call-modal__form js-call-modal-form" method="POST">
+                  <input class="call-modal__input call-modal__input_name" name="name" type="text" required placeholder="Ваше ФИО*"/>
+                  <input class="call-modal__input call-modal__input_phone" name="phone" type="tel" required placeholder="Ваш телефон*"/>
+                  <input class="call-modal__input call-modal__input_email" name="email" type="email" required placeholder="Ваш email*"/>
+                  <div class="call-modal__button">
+                    <button class="button" type="submit">
+                      <span class="button__title">Оставить заявку</span>
+                    </button>
+                  </div> 
+                </form>
               </div>
             </div>
 
@@ -639,7 +637,7 @@
             </div>
           </div>
         </div>
-        <div class="sub-modal__close-button" onclick="closeModal('sub-modal')"></div>
+        <div class="close-modal-button sub-modal__close-button" onclick="closeModal('sub-modal')"></div>
       </div>
 
       <div class="call-modal__wpapper">
@@ -649,20 +647,24 @@
               Оставить заявку для связи
             </p>
           </div>
-          <div class="call-modal__form">
-            <input class="call-modal__input call-modal__input_name" placeholder="Ваше ФИО*"/>
-            <input class="call-modal__input call-modal__input_phone" placeholder="Ваш телефон*"/>
-            <input class="call-modal__input call-modal__input_email" placeholder="Ваш email*"/> 
+          <form class="call-modal__form js-call-form-form">
+              <input class="call-modal__input call-modal__input_name" name="name" type="text" required placeholder="Ваше ФИО*"/>
+              <input class="call-modal__input call-modal__input_phone" name="phone" type="tel" required placeholder="Ваш телефон*"/>
+              <input class="call-modal__input call-modal__input_email" name="email" type="email" required placeholder="Ваш email*"/> 
+
             <div class="call-modal__button">
-              <button class="button" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
+              <button class="button" type="submit" onclick="openModal('call-modal-accept'); closeModal('call-modal__wpapper');">
                 <span class="button__title">Оставить заявку</span>
               </button>
             </div>
-          </div>
+          </form>
         </div>
+        <div class="close-modal-button call-modal__close-button" onclick="closeModal('call-modal__wpapper')"></div>
       </div>
 
   </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
   </body>
 </html>
-<script src="scripts/main.js" defer></script>
