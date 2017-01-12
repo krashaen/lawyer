@@ -186,11 +186,13 @@ html {
   background-color: #344960;
   display: none;
   height: 60%;
-  box-shadow: 0 135px 10px rgba(0,0,0,0.073);
+  box-shadow: 0 5px 20px -5px rgba(0,0,0,0.53);
+  flex-direction: column;
+  justify-content: center;
 }
 
 .menu_visible {
-  display: block;
+  display: flex;
   position: absolute;
   width: 100%;
 }
@@ -203,8 +205,12 @@ html {
   font-family: 'Carlito';
 }
 
+.menu li:first-child {
+  border: none;
+}
+
 .menu__item {
-  border-bottom: solid 1px #415973;
+  border-top: solid 1px #415973;
   height: 50px;
   display: flex;
   justify-content: center;
