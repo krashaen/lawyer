@@ -56,6 +56,12 @@ function showSubModal(count) {
   document.body.style.overflow = 'hidden'; 
 }
 
+function showConsultationForm() {
+  var modal = document.getElementsByClassName('consultation-form');
+  modal[0].className = 'consultation-form visible';
+  document.body.style.overflow = 'hidden'; 
+}
+
 function closeModal(className) {
   var element = document.getElementsByClassName(className);
   element[0].className = className + ' not-visible';
@@ -67,4 +73,3 @@ function openModal(className) {
   element[0].className = className + ' visible';
   document.body.style.overflow = 'hidden';
 }
-

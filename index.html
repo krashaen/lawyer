@@ -417,7 +417,7 @@
               Идеально для знакомства с нашей компанией
             </div>
             <div class="sub__button">
-              <button class="button" onclick="showSubModal('Получение')">
+              <button class="button" onclick="showConsultationForm()">
                 <span class="button__title">Получить за 300 р.</span>
               </button>
             </div>
@@ -627,18 +627,43 @@
               на <span class="sub-modal__details"></span> юридических услуг
             </p>
           </div>
-          <div class="user-info">
+          <form class="user-info js-subscribe-form">
             <input class="user-info__item user-info__item_name" type="text" required placeholder="Ваше имя *"/>
             <input class="user-info__item user-info__item_number" type="tel" required placeholder="Ваш номер телефона *"/>
             <input class="user-info__item user-info__item_email" type="email" required placeholder="Ваш email *"/>
             <div class="sub-modal__button">
-              <button class="button" onclick="openModal('call-modal-accept'); closeModal('sub-modal')">
+              <button class="button">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
-          </div>
+          </form>
         </div>
         <div class="close-modal-button sub-modal__close-button" onclick="closeModal('sub-modal')"></div>
+      </div>
+
+      <!--consultation form-->
+      <div class="consultation-form">
+        <div class="sub-modal__content">
+          <div class="sub-modal__title">
+            <p class="sub-modal__title_name">
+              Получение
+            </p>
+            <p class="sub-modal__title_text">
+              юридической консультации
+            </p>
+          </div>
+          <form class="user-info js-subscribe-form">
+            <input name="userName" class="user-info__item user-info__item_name" type="text" required placeholder="Ваше имя *"/>
+            <input name="phoneNumber" class="user-info__item user-info__item_number" type="tel" required placeholder="Ваш номер телефона *"/>
+            <textarea placeholder="Ваш вопрос" class="user-info__item user-info__item_message" rows="7" cols="35" name="text" wrap="hard"></textarea>
+            <div class="sub-modal__button">
+              <button class="button">
+                <span class="button__title">Получить консультацию</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="close-modal-button sub-modal__close-button" onclick="closeModal('consultation-form')"></div>
       </div>
 
       <div class="call-modal__wpapper">
@@ -649,7 +674,7 @@
             </p>
           </div>
           <form class="call-modal__form js-call-form-form">
-              <input class="call-modal__input call-modal__input_name" name="name" type="text" required placeholder="Ваше ФИО*"/>
+              <input class="call-modal__input call-modal__input_name" name="name" type="text" required placeholder="Ваше ФИО*" />
               <input class="call-modal__input call-modal__input_phone" name="phone" type="tel" required placeholder="Ваш телефон*"/>
               <input class="call-modal__input call-modal__input_email" name="email" type="email" required placeholder="Ваш email*"/> 
 

@@ -178,6 +178,7 @@ details[open] > summary::before {
 }
 .article_contacts {
   background-image: none;
+  padding: 0;
 }
 .contacts {
   max-width: 295px
@@ -187,6 +188,7 @@ details[open] > summary::before {
   background-size: cover;
   background-position: center;
   background-image: url('../images/bg_contact.jpg');
+  padding: 10px 0;
 }
 .contacts__title {
   display: block;

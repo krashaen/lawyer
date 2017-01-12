@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+  var orderForms = document.getElementsByClassName('js-subscribe-form');
+  orderForms = fromHtmlArrToJsArr(orderForms);
+  orderForms.forEach(function (form) {
+    form.onsubmit = onSubscribeFormSubmit;
+  });
+});
+
 function fromHtmlArrToJsArr(elements) {
   return Array.prototype.slice.call(elements);
 }
@@ -28,6 +36,12 @@ function onOrderFormSubmit(event) {
 
   // for closing modal in mobile version
   closeModal('call-modal__wpapper');
+}
+
+function onSubscribeFormSubmit(event) {
+  event.preventDefault();
+  openModal('call-modal-accept');
+  closeModal('consultation-form');
 }
 
 function sendFormRequest(data) {
