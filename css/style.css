@@ -185,7 +185,8 @@ html {
 .menu {
   background-color: #344960;
   display: none;
-  height: 100%;
+  height: 60%;
+  box-shadow: 0 135px 10px rgba(0,0,0,0.073);
 }
 
 .menu_visible {
@@ -200,7 +201,6 @@ html {
   list-style-type: none;
   text-align: center;
   font-family: 'Carlito';
-  height: 100%;
 }
 
 .menu__item {
