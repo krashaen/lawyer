@@ -1,19 +1,21 @@
 var orderFormAction = '/order.php';
 
 document.addEventListener('DOMContentLoaded', function(){
+  var subscribeForms = document.getElementsByClassName('js-subscribe-form');  
   var orderForms = document.getElementsByClassName('js-call-modal-form');
+
   orderForms = fromHtmlArrToJsArr(orderForms);
+  subscribeForms = fromHtmlArrToJsArr(subscribeForms);
+
+  // subscribe to order forms
   orderForms.forEach(function (form) {
     form.onsubmit = onOrderFormSubmit;
   });
-});
 
-document.addEventListener('DOMContentLoaded', function(){
-  var orderForms = document.getElementsByClassName('js-subscribe-form');
-  orderForms = fromHtmlArrToJsArr(orderForms);
-  orderForms.forEach(function (form) {
+  // subscribe to subscriber forms
+  subscribeForms.forEach(function (form) {
     form.onsubmit = onSubscribeFormSubmit;
-  });
+  })
 });
 
 function fromHtmlArrToJsArr(elements) {
@@ -47,11 +49,7 @@ function onSubscribeFormSubmit(event) {
 function sendFormRequest(data) {
   var xhr = new XMLHttpRequest();
   var body = data.reduce(function(prev, cur, index) {
-    if (cur.name) {
-      return prev + '&' + cur.name + '=' + encodeURIComponent(cur.value);
-    } else {
-      return prev;
-    }
+    return cur.name ? (prev + '&' + cur.name + '=' + encodeURIComponent(cur.value)) : prev;
   }, '');
 
   xhr.open('POST', orderFormAction, true);
