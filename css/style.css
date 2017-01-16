@@ -212,12 +212,14 @@ html {
 .menu__item {
   border-top: solid 1px #415973;
   height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .menu__link {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: #ffffff; 
 }
