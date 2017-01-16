@@ -441,7 +441,7 @@
               неограниченное число консультаций
             </div>
             <div class="sub__button">
-              <button class="button" onclick="showSubModal('1 месяц')">
+              <button class="button" onclick="showSubModal(1, 2000, '1 месяц')">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
@@ -463,7 +463,7 @@
               Вы экономите 500 руб
             </div>
             <div class="sub__button">
-              <button class="button" onclick="showSubModal('2 месяца')">
+              <button class="button" onclick="showSubModal(2, 3500, '2 месяца')">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
@@ -485,7 +485,7 @@
               Вы экономите 1150 руб
             </div>
             <div class="sub__button">
-              <button class="button" onclick="showSubModal('3 месяца')">
+              <button class="button" onclick="showSubModal(3, 4950, '3 месяца')">
                 <span class="button__title">Подписаться</span>
               </button>
             </div>
@@ -628,9 +628,9 @@
             </p>
           </div>
           <form class="user-info js-subscribe-form">
-            <input class="user-info__item user-info__item_name" type="text" required placeholder="Ваше имя *"/>
-            <input class="user-info__item user-info__item_number" type="tel" required placeholder="Ваш номер телефона *"/>
-            <input class="user-info__item user-info__item_email" type="email" required placeholder="Ваш email *"/>
+            <input class="user-info__item user-info__item_name" type="text" name="name" required placeholder="Ваше имя *"/>
+            <input class="user-info__item user-info__item_number" type="tel" name="phone" required placeholder="Ваш номер телефона *"/>
+            <input class="user-info__item user-info__item_email" type="email" name="email" required placeholder="Ваш email *"/>
             <div class="sub-modal__button">
               <button class="button">
                 <span class="button__title">Подписаться</span>
@@ -641,7 +641,7 @@
         <div class="close-modal-button sub-modal__close-button" onclick="closeModal('sub-modal')"></div>
       </div>
 
-      <!--consultation form-->
+      <!-- Consultation form-->
       <div class="consultation-form">
         <div class="sub-modal__content">
           <div class="sub-modal__title">
@@ -652,10 +652,10 @@
               юридической консультации
             </p>
           </div>
-          <form class="user-info js-subscribe-form">
-            <input name="userName" class="user-info__item user-info__item_name" type="text" required placeholder="Ваше имя *"/>
-            <input name="phoneNumber" class="user-info__item user-info__item_number" type="tel" required placeholder="Ваш номер телефона *"/>
-            <textarea placeholder="Ваш вопрос" class="user-info__item user-info__item_message" rows="7" cols="35" name="text" wrap="hard"></textarea>
+          <form class="user-info js-question-form">
+            <input name="name" class="user-info__item user-info__item_name" type="text" required placeholder="Ваше имя *"/>
+            <input name="phone" class="user-info__item user-info__item_number" type="tel" required placeholder="Ваш номер телефона *"/>
+            <textarea name="question" placeholder="Ваш вопрос" class="user-info__item user-info__item_message" rows="7" cols="35" name="text" wrap="hard"></textarea>
             <div class="sub-modal__button">
               <button class="button">
                 <span class="button__title">Получить консультацию</span>

@@ -1,11 +1,13 @@
 var orderFormAction = '/order.php';
 
 document.addEventListener('DOMContentLoaded', function(){
-  var subscribeForms = document.getElementsByClassName('js-subscribe-form');  
+  var subscribeForms = document.getElementsByClassName('js-subscribe-form');
   var orderForms = document.getElementsByClassName('js-call-modal-form');
+  var questionForms = document.getElementsByClassName('js-question-form');
 
   orderForms = fromHtmlArrToJsArr(orderForms);
   subscribeForms = fromHtmlArrToJsArr(subscribeForms);
+  questionForms = fromHtmlArrToJsArr(questionForms);
 
   // subscribe to order forms
   orderForms.forEach(function (form) {
@@ -14,18 +16,19 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // subscribe to subscriber forms
   subscribeForms.forEach(function (form) {
-    form.onsubmit = onSubscribeFormSubmit;
-  })
-});
+    form.onsubmit = onSubscribeFormSubmit.bind(null, 'subscribe');
+  });
 
-function fromHtmlArrToJsArr(elements) {
-  return Array.prototype.slice.call(elements);
-}
+  // subscribe to question form
+  questionForms.forEach(function (form) {
+    form.onsubmit = onSubscribeFormSubmit.bind(null, 'question');
+  });
+});
 
 function onOrderFormSubmit(event) {
   event.preventDefault();
   var inputs = fromHtmlArrToJsArr(event.target.elements);
-  var data = [];
+  var data = [{ name: 'type', value: 'connect' }];
 
   // validate form here if need
   inputs.forEach(function (input) {
@@ -40,16 +43,36 @@ function onOrderFormSubmit(event) {
   closeModal('call-modal__wpapper');
 }
 
-function onSubscribeFormSubmit(event) {
+function onSubscribeFormSubmit(type, event) {
   event.preventDefault();
+  var form = event.target;
+
   openModal('call-modal-accept');
+
+  var inputs = fromHtmlArrToJsArr(event.target.elements);
+  var data = [
+    { name: 'type', value: type },
+    { name: 'time', value: form.getAttribute('data-time') },
+    { name: 'cost', value: form.getAttribute('data-cost') }
+  ];
+
+  // validate form here if need
+  inputs.forEach(function (input) {
+    data.push({ name: input.name, value: input.value });
+    input.value = '';
+  });
+
+  sendFormRequest(data);
+
   closeModal('consultation-form');
+  closeModal('sub-modal');
 }
 
 function sendFormRequest(data) {
   var xhr = new XMLHttpRequest();
   var body = data.reduce(function(prev, cur, index) {
-    return cur.name ? (prev + '&' + cur.name + '=' + encodeURIComponent(cur.value)) : prev;
+    var separator = index ? '&' : '';
+    return cur.name ? (prev + separator + cur.name + '=' + encodeURIComponent(cur.value)) : prev;
   }, '');
 
   xhr.open('POST', orderFormAction, true);

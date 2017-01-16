@@ -1,3 +1,7 @@
+function fromHtmlArrToJsArr(elements) {
+  return Array.prototype.slice.call(elements);
+}
+
 function showMenu() {
   var menu = document.getElementsByClassName('menu');
   menu[0].className === 'menu' ?
@@ -48,11 +52,16 @@ function showTab(event) {
   }
 }
 
-function showSubModal(count) {
-  var countModal = document.getElementsByClassName('sub-modal__details');
-  var modal = document.getElementsByClassName('sub-modal');
-  countModal[0].innerText = count;
-  modal[0].className = 'sub-modal visible';
+function showSubModal(months, cost, title) {
+  var countModal = document.getElementsByClassName('sub-modal__details')[0];
+  var modal = document.getElementsByClassName('sub-modal')[0];
+
+  countModal.innerText = title;
+
+  modal.querySelector('form').setAttribute('data-time', months);
+  modal.querySelector('form').setAttribute('data-cost', cost);
+  modal.className = 'sub-modal visible';
+
   document.body.style.overflow = 'hidden'; 
 }
 
@@ -63,8 +72,19 @@ function showConsultationForm() {
 }
 
 function closeModal(className) {
-  var element = document.getElementsByClassName(className);
-  element[0].className = className + ' not-visible';
+  var element = document.getElementsByClassName(className)[0];
+  var forms = fromHtmlArrToJsArr(element.querySelectorAll('form'));
+
+  // clear data attributes
+  forms.forEach(function (form) {
+    for(var i = 0; i < form.attributes.length; i++) {
+      if (form.attributes[i].name.indexOf('data') >= 0) {
+        form.removeAttribute(form.attributes[i].name);
+      }
+    }
+  })
+
+  element.className = className + ' not-visible';
   document.body.style.overflow = 'auto';
 }
 
